@@ -1,0 +1,7 @@
+/.vs
+/Sokoban/obj
+/Sokoban/bin/Debug
+/Sokoban/bin/Release/Sokoban.iobj
+/Sokoban/bin/Release/Sokoban.ipdb
+/Sokoban/bin/Release/Sokoban.pdb
+*.user

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="KeyList.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameRenderer.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="GameLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KeyList.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="GameRenderer.h" />
+    <ClInclude Include="GameLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Arial.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="map.txt" />
+  </ItemGroup>
+</Project>
