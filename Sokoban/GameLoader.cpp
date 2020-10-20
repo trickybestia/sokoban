@@ -8,6 +8,9 @@ Game* GameLoader::Load(wstring& filePath, int& sizeX, int& sizeY)
 
 	ifstream file(filePath);
 
+	if (!file.good())
+		return nullptr;
+
 	file >> sizeX;
 	file >> sizeY;
 

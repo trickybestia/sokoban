@@ -5,6 +5,8 @@ using namespace sf;
 GameRenderer::GameRenderer(Game* game, sf::Vector2i renderSize, sf::Vector2i tileSize) : renderSize(renderSize), tileSize(tileSize)
 {
 	this->game = game;
+	window = nullptr;
+	fps = 1;
 }
 GameRenderer::~GameRenderer()
 {
@@ -58,38 +60,36 @@ void GameRenderer::Run()
 		window->clear();
 		window->draw(floorSprite);
 
-		for (auto tile : game->tiles)
+		for (int i = 0; i <= Tile::Player; i++)
 		{
-			if (tile->type != Tile::Crate) continue;
-			crateSprite.setPosition(Vector2f(tileSize.x * tile->x, tileSize.y * tile->y));
-			window->draw(crateSprite);
-		}
-		for (auto tile : game->tiles)
-		{
-			if (tile->type == Tile::Crate) continue;
-			Sprite* sprite = nullptr;
-			switch (tile->type)
+			for (auto tile : game->tiles)
 			{
-			case Tile::Player:
-				sprite = &playerSprite;
-				break;
-			case Tile::Wall:
-				sprite = &wallSprite;
-				break;
-			case Tile::Target:
-				sprite = &targetSprite;
-				break;
+				if (tile->type != i) continue;
+				Sprite* sprite = nullptr;
+				switch (tile->type)
+				{
+				case Tile::Player:
+					sprite = &playerSprite;
+					break;
+				case Tile::Wall:
+					sprite = &wallSprite;
+					break;
+				case Tile::Target:
+					sprite = &targetSprite;
+					break;
+				case Tile::Crate:
+					sprite = &crateSprite;
+					break;
+				}
+				sprite->setPosition(Vector2f(tileSize.x * tile->x, tileSize.y * tile->y));
+				window->draw(*sprite);
 			}
-			sprite->setPosition(Vector2f(tileSize.x * tile->x, tileSize.y * tile->y));
-			window->draw(*sprite);
 		}
 		window->display();
 		sleep(milliseconds(1000.0 / fps) - clock.getElapsedTime());
 	}
 	window->clear(Color::Yellow);
-	Font arial;
-	arial.loadFromFile("Arial.ttf");
-	Text winMessage(L"Вы победили!", arial);
+	Text winMessage(L"Вы победили!", font);
 	winMessage.setFillColor(Color::Black);
 	winMessage.move(Vector2f((renderZoneX - winMessage.getLocalBounds().width) / 2, (renderZoneY - winMessage.getLocalBounds().height) / 2));
 	window->draw(winMessage);

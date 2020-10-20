@@ -17,6 +17,7 @@ public:
 	sf::Texture wall;
 	sf::Texture floor;
 	sf::Texture target;
+	sf::Font font;
 	int fps;
 	GameRenderer(Game* game, sf::Vector2i renderSize, sf::Vector2i tileSize);
 	void Run();

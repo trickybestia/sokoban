@@ -1,27 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="KeyList.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameRenderer.cpp" />
-    <ClCompile Include="Tile.cpp" />
-    <ClCompile Include="GameLoader.cpp" />
+    <ClCompile Include="KeyList.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoader.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRenderer.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBox.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="KeyList.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Tile.h" />
-    <ClInclude Include="GameRenderer.h" />
-    <ClInclude Include="GameLoader.h" />
+    <ClInclude Include="Game.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLoader.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRenderer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyList.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBox.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="Arial.ttf" />
+    <Filter Include="Headers">
+      <UniqueIdentifier>{7486991b-38ad-4ba4-861d-df35ef5ef855}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{8f513514-ad94-41da-a637-924a5b40d853}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{e874a770-c62d-444b-bd5b-af543d5a63c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Maps">
+      <UniqueIdentifier>{4769a40b-f10f-4b09-a86f-57f9b43752a0}</UniqueIdentifier>
+      <Extensions>map</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="tiles.png" />
+    <Text Include="1.map">
+      <Filter>Resources\Maps</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="map.txt" />
+    <Font Include="Arial.ttf">
+      <Filter>Resources</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tiles.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2.map">
+      <Filter>Resources\Maps</Filter>
+    </None>
+    <None Include="3.map">
+      <Filter>Resources\Maps</Filter>
+    </None>
   </ItemGroup>
 </Project>

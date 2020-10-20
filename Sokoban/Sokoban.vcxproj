@@ -120,6 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -148,6 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MessageBox.cpp" />
     <ClCompile Include="Game.cpp">
       <DeploymentContent>false</DeploymentContent>
     </ClCompile>
@@ -158,6 +160,7 @@
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MessageBox.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameLoader.h" />
     <ClInclude Include="GameRenderer.h" />
@@ -175,9 +178,17 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="map.txt">
+    <Text Include="1.map">
       <DeploymentContent>true</DeploymentContent>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2.map">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="3.map">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

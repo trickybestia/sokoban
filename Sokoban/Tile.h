@@ -5,9 +5,9 @@ struct Tile
 	enum TileType
 	{
 		Wall,
-		Player,
 		Crate,
-		Target
+		Target,
+		Player
 	};
 	int x;
 	int y;
