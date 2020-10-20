@@ -1,4 +1,5 @@
 /.vs
+/.vscode
 /Sokoban/obj
 /Sokoban/bin/Debug
 /Sokoban/bin/Release/Sokoban.iobj
